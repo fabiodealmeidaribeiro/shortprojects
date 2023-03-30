@@ -120,25 +120,22 @@ let navbar = [
     {
         array: [
             {
-                title: 'facebook',
-                discretion: '1994',
-                target: '_blank',
-                href: 'facebook.com/laranjadev',
-            },
-            {
                 title: 'github',
+                discretion: '',
                 target: '_blank',
-                href: 'github.com/laranja-dev',
+                href: 'https://github.com/fabiodealmeidaribeiro',
             },
             {
                 title: 'instagram',
+                discretion: '',
                 target: '_blank',
-                href: 'instagram.com/laranjadev/',
+                href: 'https://www.instagram.com/fabiodealmeidaribeiro/',
             },
             {
                 title: 'linkedin',
+                discretion: '',
                 target: '_blank',
-                href: 'linkedin.com/in/laranjadev',
+                href: 'https://www.linkedin.com/in/fabiodealmeidaribeiro/',
             },
         ],
         note : false,
