@@ -1,15 +1,23 @@
-:root
-{
-    --diameter : 50px;
-    --margin : 10px;
-    --mode : ease-in-out;
-    --time : .25s;
+:root {
+    --diameter: 50px;
+    --margin: 10px;
+    --mode: ease-in-out;
+    --time: .25s;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-ul, li { margin: 0; padding: 0; }
 
-.wrap
-{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
     align-items: center;
     background-color: #000;
     clip-path: circle(calc(var(--diameter) / 2) at calc(100% - var(--diameter) + var(--diameter) / 2 - var(--margin)) calc(var(--diameter) - var(--diameter) / 2 + var(--margin)));
@@ -21,10 +29,12 @@ ul, li { margin: 0; padding: 0; }
     width: 100%;
 }
 
-.wrap ul { list-style: none; text-align: center; }
+.wrap ul {
+    list-style: none;
+    text-align: center;
+}
 
-.wrap ul li a
-{
+.wrap ul li a {
     color: #333;
     font-size: calc(var(--diameter) / 2);
     font-weight: 100;
@@ -33,10 +43,11 @@ ul, li { margin: 0; padding: 0; }
     transition: var(--time) var(--mode);
 }
 
-.wrap ul li a:hover { color: #fff; }
+.wrap ul li a:hover {
+    color: #fff;
+}
 
-.btn
-{
+.btn {
     align-items: center;
     background-color: #000;
     border-radius: 50%;
@@ -54,11 +65,29 @@ ul, li { margin: 0; padding: 0; }
     z-index: 2;
 }
 
-.btn:hover { color: #000; background-color: #fff; }
-#active:checked ~ .wrap { clip-path: circle(100%); }
-#active:checked ~ .btn { color: #fff; background-color: #f00; }
-#active:checked ~ .btn i::before { content: '\f00d'; }
-input { display: none; }
+.btn:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#active:checked~.wrap {
+    clip-path: circle(100%);
+}
+
+#active:checked~.btn {
+    color: #fff;
+    background-color: #f00;
+}
+
+#active:checked~.btn i::before {
+    content: '\f00d';
+}
+
+input {
+    display: none;
+}
 
 
-#item:checked ~ .wrap { clip-path: circle(100%); }
+#item:checked~.wrap {
+    clip-path: circle(100%);
+}

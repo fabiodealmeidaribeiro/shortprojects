@@ -1,24 +1,22 @@
-:root
-{
-    --color : #cc00ff;
-    --background : #330066;
-    --margin : 10px;
+:root {
+    --color: #cc00ff;
+    --background: #330066;
+    --margin: 10px;
 
     --height: calc(var(--margin) * 3);
-    
+
     --width: calc(var(--margin) * 6);
 
     --start: calc(var(--width) * 1);
-    --end : calc(var(--width) * 8);
+    --end: calc(var(--width) * 8);
 
     --title-width: calc(var(--width) * 4 - var(--margin) * 7);
 
-    --time : .5s;
-    --mode : ease;
+    --time: .5s;
+    --mode: ease;
 }
 
-*
-{
+* {
     box-sizing: border-box;
     font-family: 'Segoe UI';
     font-size: calc(var(--margin) * 1.5);
@@ -27,14 +25,12 @@
 }
 
 html,
-body
-{
+body {
     height: 100%;
     width: 100%;
 }
 
-aside
-{
+aside {
     background-color: var(--background);
     color: white;
     height: 100%;
@@ -46,64 +42,55 @@ aside
     width: var(--start);
 }
 
-a
-{
+a {
     align-items: center;
     color: inherit;
     display: flex;
     text-decoration: none;
 }
 
-#logo-wrap
-{
+#logo-wrap {
     height: calc(var(--margin) * 4);
     width: calc(var(--end) - var(--margin) * 2);
     margin: calc(var(--margin) * 2) 0;
     position: relative;
 }
 
-#logo-wrap a
-{
+#logo-wrap a {
     height: 100%;
     width: 100%;
 }
 
-#logo-wrap a span
-{
+#logo-wrap a span {
     margin: 0 0 0 calc(var(--margin) * 1);
     overflow: hidden;
     transition: all var(--time) var(--mode);
 }
 
-#logo
-{
+#logo {
     height: calc(var(--margin) * 4);
     width: calc(var(--margin) * 4);
     border-radius: 50%;
     background-color: red;
 }
 
-#icon-wrap
-{
+#icon-wrap {
     height: calc(var(--margin) * 2);
     width: calc(var(--margin) * 2);
 }
 
-li a
-{
+li a {
     height: calc(var(--margin) * 3);
     position: relative;
     width: calc(var(--end) - var(--margin) * 4);
 }
 
-li a i
-{
+li a i {
     font-size: calc(var(--margin) * 2);
     transition: all var(--time) var(--mode);
 }
 
-li a span
-{
+li a span {
     align-items: center;
     display: flex;
     height: calc(var(--margin) * 3);
@@ -113,16 +100,14 @@ li a span
     width: var(--title-width);
 }
 
-.bxs-chevron-right
-{
+.bxs-chevron-right {
     overflow: hidden;
     position: absolute;
     right: 0;
     transition: all var(--time) var(--mode);
 }
 
-.side-menu li
-{
+.side-menu li {
     border-radius: var(--margin);
     list-style: none;
     overflow: hidden;
@@ -130,67 +115,56 @@ li a span
     transition: all var(--time) var(--mode);
 }
 
-.side-sub-menu
-{
+.side-sub-menu {
     max-height: 0;
     overflow: hidden;
     transition: all var(--time) var(--mode);
 }
 
-.active
-{
+.active {
     background-color: var(--color);
     transition: all var(--time) var(--mode);
 }
 
-.active .side-sub-menu
-{
+.active .side-sub-menu {
     max-height: calc(var(--height) * 4 + var(--margin) * 2);
 }
 
-.side-sub-menu li
-{
+.side-sub-menu li {
     height: var(--height);
     padding: 0 0 0 calc(var(--margin) * 3);
 }
 
-.side-sub-menu li a
-{
+.side-sub-menu li a {
     display: initial;
     height: 100%;
     position: initial;
 }
 
-#container
-{
+#container {
     margin: 0 0 0 var(--start);
     transition: all var(--time) var(--mode);
     width: calc(100% - var(--start));
 }
 
-.l
-{
+.l {
     height: 3rem;
 }
 
-article
-{
+article {
     min-height: calc(100vh - (3rem * 2));
     width: 100%;
 }
 
-.active a>.bxs-chevron-right
-{
+.active a>.bxs-chevron-right {
     transform: rotate(90deg);
 }
 
-aside:hover
-{
+aside:hover {
     width: var(--end);
 }
 
-aside:hover ~ #container
-{
+aside:hover~#container {
     margin: 0 0 0 var(--end);
     width: calc(100% - var(--end));
 }

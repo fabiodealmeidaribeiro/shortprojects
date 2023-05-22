@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,18 +15,18 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-h1{
+h1 {
     text-transform: uppercase;
     padding: 0 15px;
     text-align: center;
 }
 
-p{
+p {
     padding: 0 15px;
     text-align: center;
 }
 
-.images-container{
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@ p{
     margin: 25px 0;
 }
 
-.images-container .image-wrapper{
+.container .wrapper {
     position: relative;
     margin: 10px;
     cursor: pointer;
@@ -48,19 +48,19 @@ p{
 
 /* Loading Styles */
 
-.images-container.loading .image-wrapper{
+.container.loading .wrapper {
     opacity: 0.2;
 }
 
-.images-container.loading .image-wrapper::after{
+.container.loading .wrapper::after {
     background-color: lightgrey;
 }
 
-.images-container.loading .image-wrapper::before{
-   z-index: -1;
+.container.loading .wrapper::before {
+    z-index: -1;
 }
 
-.images-container .image-wrapper::before{
+.container .wrapper::before {
     content: 'Pick Me!';
     position: absolute;
     color: #fff;
@@ -74,10 +74,10 @@ p{
     transition: all 0.1s ease-in;
 }
 
-.images-container .image-wrapper::after{
+.container .wrapper::after {
     content: '';
     position: absolute;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     bottom: 0;
     right: 0;
@@ -85,7 +85,7 @@ p{
     z-index: 1;
 }
 
-.images-container .image-wrapper img{
+.container .wrapper img {
     cursor: pointer;
     max-width: 200px;
     width: 100%;
@@ -93,16 +93,16 @@ p{
     object-fit: cover;
 }
 
-.images-container .image-wrapper:hover::before{
+.container .wrapper:hover::before {
     letter-spacing: 0.5px;
     border-bottom: 2px solid crimson;
 }
 
-.lightbox{
+.lightbox {
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    left:0;
+    left: 0;
     right: 0;
     top: 0;
     bottom: 0;
@@ -113,20 +113,20 @@ p{
     transition: all 0.15s ease-in;
 }
 
-.lightbox.show{
-    background-color: rgba(0,0,0, 0.85);
+.lightbox.show {
+    background-color: rgba(0, 0, 0, 0.85);
     opacity: 1;
     visibility: visible;
     z-index: 1000;
 }
 
-.lightbox img{
+.lightbox img {
     max-width: 90%;
 }
 
 /* Close lightbox "x" icon */
 
-.lightbox .close-lightbox{
+.lightbox .close-lightbox {
     cursor: pointer;
     position: absolute;
     top: 30px;
@@ -135,8 +135,8 @@ p{
     height: 20px;
 }
 
-.lightbox .close-lightbox::after, 
-.lightbox .close-lightbox::before{
+.lightbox .close-lightbox::after,
+.lightbox .close-lightbox::before {
     content: '';
     width: 3px;
     height: 20px;
@@ -146,11 +146,11 @@ p{
     transform: rotate(45deg);
 }
 
-.lightbox .close-lightbox::before{
+.lightbox .close-lightbox::before {
     transform: rotate(-45deg);
 }
 
-.lightbox .close-lightbox:hover::after, 
-.lightbox .close-lightbox:hover::before{
+.lightbox .close-lightbox:hover::after,
+.lightbox .close-lightbox:hover::before {
     background-color: #fff;
 }
